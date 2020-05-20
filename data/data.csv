@@ -1,4 +1,4 @@
-﻿time,time_code,country,country_code,co2_emissions,epr_female,epr_male,income_pc,edu_spending
+﻿year,time_code,country,country_code,co2_emissions,epr_female,epr_male,income_pc,edu_spending
 1991,YR1991,Nigeria,NGA,0.432826876,53.3730011,64.40599823,412.4300398,..
 1991,YR1991,Ethiopia,ETH,0.060168109,64.31199646,87.2480011,237.471054,..
 1991,YR1991,"Egypt, Arab Rep.",EGY,1.370769529,16.72400093,68.3690033,545.8134365,..
@@ -1014,8 +1014,3 @@
 2019,YR2019,Turkey,TUR,..,28.42700005,63.8409996,..,..
 2019,YR2019,France,FRA,..,46.50699997,54.82300186,..,..
 2019,YR2019,United Kingdom,GBR,..,55.58599854,65.32099915,..,..
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-Data from database: World Development Indicators,,,,,,,,
-Last Updated: 04/09/2020,,,,,,,,
