@@ -24,7 +24,7 @@ chart <- ggplot(plot_df, aes(x = country,
                               fill = country)) +
   geom_bar(stat = "identity") +
   theme(plot.title = element_text(hjust = 0.5)) +
-  labs(title = "CO2 Emission Growth Rates from 1992 - 2014",
+  labs(title = "CO2 Emission Growth Rates by Country from 1992 - 2014",
        x = "Country",
        y = "CO2 Emission Growth Rate (%)",
        fill = "Countries") +
