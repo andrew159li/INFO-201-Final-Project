@@ -28,7 +28,7 @@ df_melt <- gather(df_clean,
 )
 
 # bar chart
-ggplot(data = df_melt) +
+population_school_country <- ggplot(data = df_melt) +
   geom_col(
     mapping = aes(x = country, y = population_perc, fill = school_type),
     position = "stack"

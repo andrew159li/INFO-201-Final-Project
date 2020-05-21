@@ -1,0 +1,64 @@
+---
+title: "Report"
+author: "Andrew Li"
+date: "5/21/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load in needed libraries
+library("knitr")
+library("dplyr")
+library("ggplot2")
+
+# Load in script files
+source("chart1.R")
+source("chart2.R")
+source("chart3.R")
+source("summaryinfo.R")
+source("table.R")
+```
+
+# TODO
+- chart 2 works by itself, but not in rmarkdown
+- gotta figure out summaryinfo, maybe change the five summary informations into individual variables
+- paragraph to include summary info in
+- table column edu_spending doesn't exist, maybe just my system
+- table: You must also describe why you included the table, and what information it reveals.
+
+
+
+for each chart:
+Again, in your report you must describe why you included the chart (e.g., what it attempts to seeks to express), and what information it reveals. For each chart, we expect the following:
+
+
+## Introduction
+We are interested in the topic of global economy because by analyzing global economic data, we will be able to better understand the complexities of global activity. Since the economy is something that affects everyone at all stages of their life, we felt that analyzing this topic would be beneficial for learning how the economy is changing, and why these changes are happening. We chose to analyze how (main questions asked here). The dataset we used to answer our questions was data published by World Bank and compiled from officially-recognized international resources. We then filtered the dataset to only include factors of interest.
+
+
+## Summary Information
+While analyzing our data, we found some noteworthy observations, especially in regards to `r summaryinfo1`. will add on 
+
+## Table
+```{r table, echo = FALSE}
+kable(table_data)
+```
+
+
+## Chart 1
+```{r chart1, echo = FALSE}
+plot(population_school_country)
+```
+
+## Chart 2
+```{r chart2, echo = FALSE}
+plot(epr_co2_interactive)
+```
+## Chart 3
+```{r chart3, echo = FALSE}
+plot(chart)
+```
+
+

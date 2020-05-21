@@ -1,0 +1,38 @@
+---
+title: "index.html"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+# Load in script files
+source("scripts/chart1.R")
+source("scripts/chart2.R")
+source("scripts/chart3.R")
+source("scripts/summaryinfo.R")
+source("scripts/table.R")
+
+# Load in needed libraries
+library("knitr")
+library("dplyr")
+library("ggplot2")
+```
+# TODO
+sourcing R files not working
+
+## Introduction
+We are interested in the topic of global economy because by analyzing global economic data, we will be able to better understand the complexities of global activity. Since the economy is something that affects everyone at all stages of their life, we felt that analyzing this topic would be beneficial for learning how the economy is changing, and why these changes are happening. We chose to analyze how (main questions asked here). The dataset we used to answer our questions was data published by World Bank and compiled from officially-recognized international resources. We then filtered the dataset to only include factors of interest.
+
+## Summary
+
+## Table
+```{r table, echo = FALSE}
+kable(table)
+```
+## Chart 1
+```{r chart1, echo = FALSE}
+
+```
+
+
+

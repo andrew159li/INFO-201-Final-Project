@@ -19,7 +19,7 @@ plot_df <- data %>%
   mutate(co2_growth_rate = round(co2_growth_rate, 2))
 
 # Chart
-chart <- ggplot(plot_df2, aes(x = country,
+chart <- ggplot(plot_df, aes(x = country,
                               y = co2_growth_rate,
                               fill = country)) +
   geom_bar(stat = "identity") +
@@ -33,3 +33,4 @@ chart <- ggplot(plot_df2, aes(x = country,
 
 interactive_chart <- ggplotly(chart = ggplot2::last_plot(),
                               tooltip = "co2_growth_rate")
+chart

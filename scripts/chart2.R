@@ -20,3 +20,5 @@ epr_co2 <- ggplot(data = epr_co2_df, aes(label = country)) +
   )
 
 epr_co2_interactive <- ggplotly(epr_co2)
+
+epr_co2_interactive
