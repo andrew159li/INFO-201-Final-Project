@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library("knitr")
 library("dplyr")
 library("ggplot2")
+library("plotly")
+library("tidyr")
 
 # Load in script files
 source("chart1.R")

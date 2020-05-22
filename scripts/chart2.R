@@ -2,13 +2,16 @@ library(dplyr)
 library(plotly)
 library(tidyr)
 
-df <- read.csv("../data/data.csv", stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM")
+df <- read.csv("../data/data.csv",
+  stringsAsFactors = FALSE,
+  fileEncoding = "UTF-8-BOM"
+)
 
-epr_co2_df <- df %>% 
-  mutate(avg_epr = rowMeans(select(df,epr_female, epr_male), na.rm = TRUE)) %>%
-  filter(co2_emissions != "..") %>% 
-  mutate(co2_emissions_num = as.numeric(co2_emissions)) %>% 
-  select(country, co2_emissions_num, avg_epr) %>% 
+epr_co2_df <- df %>%
+  mutate(avg_epr = rowMeans(select(df, epr_female, epr_male), na.rm = TRUE)) %>%
+  filter(co2_emissions != "..") %>%
+  mutate(co2_emissions_num = as.numeric(co2_emissions)) %>%
+  select(country, co2_emissions_num, avg_epr) %>%
   drop_na()
 
 epr_co2 <- ggplot(data = epr_co2_df, aes(label = country)) +
