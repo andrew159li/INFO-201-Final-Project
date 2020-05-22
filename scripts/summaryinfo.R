@@ -37,7 +37,9 @@ get_summary_info <- function(dataset) {
   info$top_epr_male_country <- first(get_top_3(data, epr_male)$country)
   # highest avg income per capita - country
   info$top_income_pc <- first(get_top_3(data, income_pc)$country)
-  # highest avg education expenditure - country
-  info$top_edu_spending <- first(get_top_3(data, edu_spending)$country)
+  # highest avg primary education - country
+  info$pri_edu <- first(get_top_3(data, pupils_pri_educ)$country)
+  # highest avg secondary education - country
+  info$sec_edu <- first(get_top_3(data, pupils_sec_educ)$country)
   return(info)
 }
