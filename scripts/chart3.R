@@ -1,5 +1,6 @@
 library(dplyr)
 library(ggplot2)
+library(plotly)
 library(lintr)
 
 # Setting Up Data
@@ -33,4 +34,5 @@ chart <- ggplot(plot_df, aes(x = country,
 
 interactive_chart <- ggplotly(chart = ggplot2::last_plot(),
                               tooltip = "co2_growth_rate")
-chart
+
+interactive_chart
