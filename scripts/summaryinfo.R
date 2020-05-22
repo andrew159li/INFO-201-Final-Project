@@ -9,9 +9,10 @@ get_top_3 <- function(dataset, col) {
     arrange(-avg) %>%
     top_n(3)
   return(top_3_df)
+}
 
 get_summary_info <- function(df) {
-  df[, 5:9] <- suppressWarnings(sapply(data[, 5:9], as.numeric))
+  df[, 5:9] <- suppressWarnings(sapply(df[, 5:9], as.numeric))
 
   # Extracting Data -- General & Top 3 WDI
   general_info <- df %>%

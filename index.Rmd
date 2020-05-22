@@ -46,13 +46,13 @@ We are interested in the topic of global economy because by analyzing global eco
 
 ## Summary Information
 While analyzing our data, we found some noteworthy observations, especially in regards to. will add on 
-```{r summaryinfo, echo = FALSE}
+```{r summaryinfo, echo = FALSE, message = FALSE}
 temp <- get_summary_info(df)
 ```
 
 
 ## Table
-```{r table, echo = FALSE}
+```{r table, echo = FALSE, message = FALSE}
 table_data <- make_table(df)
 kable(table_data)
 ```
@@ -60,7 +60,7 @@ kable(table_data)
 
 ## Chart 1
 ```{r chart1, echo = FALSE}
-graph1 <- population_school_country(df)
+graph1 <- chart1(df)
 graph1
 ```
 
