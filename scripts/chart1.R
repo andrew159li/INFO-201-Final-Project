@@ -1,6 +1,7 @@
 # load necessary libraries
 library("dplyr")
 library("ggplot2")
+library("tidyr")
 
 # load in data
 df <- read.csv("../data/data.csv",
