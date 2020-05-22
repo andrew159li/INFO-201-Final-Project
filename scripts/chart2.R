@@ -4,10 +4,6 @@ library(tidyr)
 library(lintr)
 library(styler)
 
-df <- read.csv("../data/data.csv",
-                 fileEncoding = "UTF-8-BOM",
-                 stringsAsFactors = FALSE)
-
 chart2 <- function(df) {
   epr_co2_df <- df %>%
     mutate(avg_epr = rowMeans(select(df, epr_female, epr_male),
