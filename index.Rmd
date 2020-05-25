@@ -1,10 +1,12 @@
 ---
-title: "Report"
+title: "Global Economic Development"
+author: "Alvin Jeong, Soo Yong Lee, Glory Yang, Catherine Oei, Andrew Li"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "./scripts/")
 
 # Load in needed libraries
 library("knitr")
@@ -27,53 +29,63 @@ source("scripts/summaryinfo.R")
 source("scripts/table.R")
 ```
 
-# TODO
-- gotta figure out summaryinfo, maybe change the five summary informations into individual variables
-- paragraph to include summary info in
-- table: You must also describe why you included the table, and what information it reveals.
-- main question: 
-- chart 3 ordering suppos to be lowest to highest
-
-
-
-- for each chart:
-Again, in your report you must describe why you included the chart (e.g., what it attempts to seeks to express), and what information it reveals. For each chart, we expect the following:
-
-
 ## Introduction
-We are interested in the topic of global economy because by analyzing global economic data, we will be able to better understand the complexities of global activity. Since the economy is something that affects everyone at all stages of their life, we felt that analyzing this topic would be beneficial for learning how the economy is changing, and why these changes are happening. We chose to analyze how (main questions asked here). The dataset we used to answer our questions was data published by World Bank and compiled from officially-recognized international resources. We then filtered the dataset to only include factors of interest.
-
+The economy is something that is rapidly evolving and is hard to keep track of. In order to understand how the economy is constantly changing, we chose to focus our question on how global development affects certain factors, such as student populations, employment rates, and CO2 emissions. The dataset we used to answer our questions was data published by World Bank, and it will allow us to gain a better understanding of how economic development affects said factors.
 
 ## Summary Information
-While analyzing our data, we found some noteworthy observations, especially in regards to. will add on 
 ```{r summaryinfo, echo = FALSE, message = FALSE}
-temp <- get_summary_info(df)
+list_info <- get_summary_info(df)
 ```
 
+Our dataset provides many interesting observations based on the variables it contains. Out of the `r list_info$num_countries` in our dataset, the country that produced the most CO2 emissions was `r list_info$top_co2_country`. Regarding employment rate, `r list_info$top_epr_fem_country` had the highest female employment rate of all the countries, while `r list_info$top_epr_male_coutry` had the highest male employment rate. Additionally, `r list_info$top_income_pc` had the highest average income out of all the countries. As for education, `r list_info$pri_edu` had the most primary and secondary students enrolled over the course of `r list_info$num_years` years.
 
 ## Table
+
+While the raw dataset contains lots of specific information, it is hard to sift through its many columns. Below is a table that has been made to be more digestible to the reader by combining certain columns of data together.
+
 ```{r table, echo = FALSE, message = FALSE}
 table_data <- make_table(df)
 kable(table_data)
 ```
 
+Our table shows that the average income of a country does not seem to be related to the average population. However, our table does show that average CO2 emission rates increase in relation to average income.
 
-## Chart 1
+## Stacked Bar Chart
+
+This stacked bar chart depicts the percentage of the population in a primary and secondary school based on the country.
+
 ```{r chart1, echo = FALSE}
 graph1 <- chart1(df)
 graph1
 ```
 
-## Chart 2
+This chart shows that many people do not attend secondary school after primary school.
+<br/>
+<br/>
+
+## Scatterplot
+
+This scatterplot depicts how the employment to population ratio per country affects CO2 emissions.
+
 ```{r chart2, echo = FALSE}
 graph2 <- chart2(df)
 graph2
 ```
-## Chart 3
+
+This chart shows that CO2 emissions peaks when a country has around 60-65% employment to population ratio.
+<br/>
+<br/>
+
+## Diverging Bar Chart
+
+This diverging bar chart depicts a country's CO2 emission growth rates.
+
 ```{r chart3, echo = FALSE}
 graph3 <- chart3(df)
 graph3
-
 ```
+
+This chart shows that most countries' CO2 emissions are increasing over time.
+
 
 
