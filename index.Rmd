@@ -37,7 +37,7 @@ The economy is something that is rapidly evolving and is hard to keep track of. 
 list_info <- get_summary_info(df)
 ```
 
-Our dataset provides many interesting observations based on the variables it contains. Out of the `r list_info$num_countries` in our dataset, the country that produced the most CO2 emissions was `r list_info$top_co2_country`. Regarding employment rate, `r list_info$top_epr_fem_country` had the highest female employment rate of all the countries, while `r list_info$top_epr_male_coutry` had the highest male employment rate. Additionally, `r list_info$top_income_pc` had the highest average income out of all the countries. As for education, `r list_info$pri_edu` had the most primary and secondary students enrolled over the course of `r list_info$num_years` years.
+Our dataset provides many interesting observations based on the variables it contains. Out of the `r list_info$num_countries` in our dataset, the country that produced the most CO2 emissions was `r list_info$top_co2_country`. Regarding employment rate, `r list_info$top_epr_fem_country` had the highest female employment rate of all the countries, while `r list_info$top_epr_male_country` had the highest male employment rate. Additionally, `r list_info$top_income_pc` had the highest average income out of all the countries. As for education, `r list_info$pri_edu` had the most primary and secondary students enrolled over the course of `r list_info$num_years` years.
 
 ## Table
 
