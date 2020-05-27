@@ -5,7 +5,7 @@ library(lintr)
 
 chart3 <- function(df) {
   # Setting Up Data
-  df[, 5:9] <- suppressWarnings(sapply(df[, 5:9], as.numeric))
+  df[, 5:11] <- suppressWarnings(sapply(df[, 5:11], as.numeric))
 
   # Chart Data
   plot_df <- df %>%

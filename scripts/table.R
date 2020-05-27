@@ -2,6 +2,7 @@ library("dplyr")
 
 make_table <- function(data) {
   data[, 5:11] <- suppressWarnings(sapply(data[, 5:11], as.numeric))
+  data[is.na(data)] = 0
   # Aggregate table data
   table_data <- data %>%
     select(
@@ -10,23 +11,23 @@ make_table <- function(data) {
     ) %>%
     group_by(country) %>%
     summarise(
-      Average_Income = mean(income_pc, na.rm = T),
-      Average_Population = mean(population, na.rm = T),
-      Average_Primary_Students = mean(pupils_pri_educ, na.rm = T),
-      Average_Secondary_Students = mean(pupils_sec_educ, na.rm = T),
-      Average_Female_Employment = mean(epr_female, na.rm = T),
-      Average_Male_Employment = mean(epr_male, na.rm = T),
-      Average_CO2_Emissions = mean(co2_emissions, na.rm = T)
+      Average_Income = round(mean(income_pc, na.rm = T), 1),
+      Average_Population = round(mean(population, na.rm = T), 1),
+      Average_Primary_Students = round(mean(pupils_pri_educ, na.rm = T), 1),
+      Average_Secondary_Students = round(mean(pupils_sec_educ, na.rm = T), 1),
+      Average_Female_Employment = round(mean(epr_female, na.rm = T), 2),
+      Average_Male_Employment = round(mean(epr_male, na.rm = T), 2),
+      Average_CO2_Emissions = round(mean(co2_emissions, na.rm = T), 2)
     ) %>%
     arrange(-Average_Income)
   # Rename columns
   names(table_data) <- c(
-    "Country", "Average Income (Current USD)",
-    "Average Population", "Average Primary Students",
-    "Average Secondary Students",
-    "Average Female Employment (Employment:Population (female age 15+))",
-    "Average Male Employment (Employment:Population (male age 15+))",
-    "Average CO2 Emissions (Metric tons per capita)"
+    "Country", "Avg. Income (current USD)",
+    "Avg. Population", "Avg. Primary Students",
+    "Avg. Secondary Students",
+    "Avg. Female Employment to Population Ratio (age 15+)",
+    "Avg. Male Employment to Population Ratio (age 15+)",
+    "Avg. CO2 Emissions (metric tons per capita)"
   )
   # Converting the table dataframe into characters
   # in order to concatenate it with the units dataframe.

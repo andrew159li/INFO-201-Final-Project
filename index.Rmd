@@ -14,6 +14,7 @@ library("dplyr")
 library("ggplot2")
 library("plotly")
 library("tidyr")
+library("kableExtra")
 
 # Read in data
 df <- read.csv("data/data.csv",
@@ -22,70 +23,75 @@ df <- read.csv("data/data.csv",
 )
 
 # Load in script files
+source("scripts/summaryinfo.R")
+source("scripts/table.R")
 source("scripts/chart1.R")
 source("scripts/chart2.R")
 source("scripts/chart3.R")
-source("scripts/summaryinfo.R")
-source("scripts/table.R")
 ```
 
 ## Introduction
-The economy is something that is rapidly evolving and is hard to keep track of. In order to understand how the economy is constantly changing, we chose to focus our question on how global development affects certain factors, such as student populations, employment rates, and CO2 emissions. The dataset we used to answer our questions was data published by World Bank, and it will allow us to gain a better understanding of how economic development affects said factors.
+The purpose of this project is to examine various factors contributing to the development of countries around the globe. Global development is a complex subject, but to best understand how countries are able to mobilize their development and progress, we chose to focus on how certain factors such as student populations, employment rates, and CO2 emissions compared across countries of different development levels. The dataset we used to answer our questions were from the world development index data published by the World Bank. 
 
 ## Summary Information
 ```{r summaryinfo, echo = FALSE, message = FALSE}
 list_info <- get_summary_info(df)
 ```
 
-Our dataset provides many interesting observations based on the variables it contains. Out of the `r list_info$num_countries` in our dataset, the country that produced the most CO2 emissions was `r list_info$top_co2_country`. Regarding employment rate, `r list_info$top_epr_fem_country` had the highest female employment rate of all the countries, while `r list_info$top_epr_male_country` had the highest male employment rate. Additionally, `r list_info$top_income_pc` had the highest average income out of all the countries. As for education, `r list_info$pri_edu` had the most primary and secondary students enrolled over the course of `r list_info$num_years` years.
+Our dataset provides many interesting observations pertaining to the factors of world development. We examined `r list_info$num_countries` countries total in our dataset--5 of the most populous countries from each of the 7 regions in the world. The country that produced the highest average metric tons per capita of CO2 emissions was `r list_info$top_co2_country`. Regarding employment rates, `r list_info$top_epr_fem_country` had the highest female employment rate of all the countries, while `r list_info$top_epr_male_country` had the highest male employment rate on average. Additionally, `r list_info$top_income_pc` had the highest average income out of all the countries. As for education, `r list_info$pri_edu` had the highest average number of primary and secondary students enrolled over the course of `r list_info$num_years` years.
 
 ## Table
 
-While the raw dataset contains lots of specific information, it is hard to sift through its many columns. Below is a table that has been made to be more digestible to the reader by combining certain columns of data together.
+While the raw dataset contains lots of specific information, it is difficult to sift through it for summarized information. Below is a table that has been made to be more digestible to the reader by arranging countries from highest to lowest income and displaying averages for each global development factor in each column. 
 
 ```{r table, echo = FALSE, message = FALSE}
 table_data <- make_table(df)
-kable(table_data)
+kable(table_data) %>% 
+  kable_styling("striped", full_width = F)
 ```
 
 Our table shows that the average income of a country does not seem to be related to the average population. However, our table does show that average CO2 emission rates increase in relation to average income.
 
-## Stacked Bar Chart
+## Chart 1
 
-This stacked bar chart depicts the percentage of the population in a primary and secondary school based on the country.
+This stacked bar chart depicts the average percentage of the population currently in primary and secondary school for each country. 
 
 ```{r chart1, echo = FALSE}
 graph1 <- chart1(df)
 graph1
 ```
 
-This chart shows that many people do not attend secondary school after primary school.
+This chart shows the range in percentages of students in school for each country. For some countries, there are more students in primary school than secondary school. For others, there are much more students in secondary school than primary school, and for some, the percentage is about the same. 
+
 <br/>
 <br/>
 
-## Scatterplot
+## Chart 2
 
-This scatterplot depicts how the employment to population ratio per country affects CO2 emissions.
+This scatterplot depicts how the average employment to population ratio per country correlates with average CO2 emissions. 
 
 ```{r chart2, echo = FALSE}
 graph2 <- chart2(df)
 graph2
 ```
 
-This chart shows that CO2 emissions peaks when a country has around 60-65% employment to population ratio.
+This chart shows that CO2 emissions peaks when a country has around a 60-65% employment to population ratio, but in general, the correlation between these two factors vary greatly for each country.
+
 <br/>
 <br/>
 
-## Diverging Bar Chart
+## Chart 3
 
-This diverging bar chart depicts a country's CO2 emission growth rates.
+This diverging bar chart depicts how CO2 emission growth rates compare across countries.
 
 ```{r chart3, echo = FALSE}
 graph3 <- chart3(df)
 graph3
 ```
 
-This chart shows that most countries' CO2 emissions are increasing over time.
+This chart shows that most countries' CO2 emissions have increased over time, with China and Bangladesh being the fastest growing emitters. The United Kingdom and France on the other hand, have seen the greatest reductions in CO2 emissions.
 
+<br/>
+<br/>
 
 
