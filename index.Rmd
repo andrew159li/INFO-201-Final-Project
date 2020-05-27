@@ -15,6 +15,7 @@ library("ggplot2")
 library("plotly")
 library("tidyr")
 library("kableExtra")
+library("lintr")
 
 # Read in data
 df <- read.csv("data/data.csv",
@@ -46,7 +47,7 @@ While the raw dataset contains lots of specific information, it is difficult to 
 
 ```{r table, echo = FALSE, message = FALSE}
 table_data <- make_table(df)
-kable(table_data) %>% 
+kable(table_data) %>%
   kable_styling("striped", full_width = F)
 ```
 

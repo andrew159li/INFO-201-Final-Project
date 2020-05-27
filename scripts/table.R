@@ -1,8 +1,9 @@
 library("dplyr")
+library("lintr")
 
 make_table <- function(data) {
   data[, 5:11] <- suppressWarnings(sapply(data[, 5:11], as.numeric))
-  data[is.na(data)] = 0
+  data[is.na(data)] <- 0
   # Aggregate table data
   table_data <- data %>%
     select(

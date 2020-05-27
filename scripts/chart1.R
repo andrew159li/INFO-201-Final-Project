@@ -2,11 +2,12 @@
 library("dplyr")
 library("ggplot2")
 library("tidyr")
+library("lintr")
 
 # clean up data
 chart1 <- function(df) {
   df[, 5:11] <- suppressWarnings(sapply(df[, 5:11], as.numeric))
-  df[is.na(df)] = 0
+  df[is.na(df)] <- 0
   df_clean <- df %>%
     mutate(
       primary_perc = pupils_pri_educ / population,
@@ -21,16 +22,13 @@ chart1 <- function(df) {
   # order bars
   df2 <- df_clean
   df2$country <- factor(df2$country,
-                        levels = unique(df2$country[order(df2$avg_secondary + df2$avg_primary)]))
+      levels = unique(df2$country[order(df2$avg_secondary + df2$avg_primary)]))
   # melt dataframe
   df_melt <- gather(df2,
     key = "school_type",
     value = "population_perc", -country
   )
-  # # replace non-numeric data with 0
-  # df_melt_no_na <- df_melt
-  # df_melt_no_na[is.na(df_melt_no_na)] = 0
-  
+
   # create bar chart
   pop_school_country_plot <- ggplot(data = df_melt) +
     geom_col(
@@ -38,7 +36,7 @@ chart1 <- function(df) {
       position = "stack"
     ) +
     coord_flip() +
-    ggtitle("Average Population in School per Country, 1991-2019") +
+    ggtitle("Avg. Population in School per Country, 1991-2019") +
     theme(plot.title = element_text(hjust = 0.5)) +
     xlab("Country") +
     ylab("% Population in School") +
@@ -50,7 +48,7 @@ chart1 <- function(df) {
       labels = scales::percent_format(accuracy = 1),
       limits = c(0, 0.3)
     )
-  
+
   interactive_chart <- ggplotly(pop_school_country_plot = ggplot2::last_plot())
   return(interactive_chart)
 }
