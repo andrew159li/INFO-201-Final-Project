@@ -26,7 +26,7 @@ intro_panel <- mainPanel(
   br(), br(),
   img(src = "https://fintechnews.sg/wp-content/uploads/2018/12/Remittance-Statistics-Worldbank-1-1440x564_c.png",
       width = "864px", height = "338px"),
-  br(),
+  br(), br(),
   h3("Sources"),
   p(a(href = "https://fintechnews.sg/wp-content/uploads/2018/12/Remittance-Statistics-Worldbank-1-1440x564_c.png", "WorldBank Image"),
     br(),
