@@ -1,8 +1,9 @@
 library("shiny")
 
 intro_panel <- mainPanel(
-  "Home",
-  titlePanel("Study on World Income Per Capita"), br(),
+  includeCSS("overview_style.css"),
+  "Overview",
+  h1("Study on World Income Per Capita"), br(),
   h3("What is the study about?"), 
   p("Are the richest countries the ones that produce the most CO2? Are they the
     most educated? Are they the ones with the least unemployment? With a set of data
