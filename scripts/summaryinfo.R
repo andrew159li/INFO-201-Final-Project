@@ -12,7 +12,7 @@ get_top_3 <- function(dataset, col) {
 }
 
 get_summary_info <- function(df) {
-  df[, 5:9] <- suppressWarnings(sapply(df[, 5:11], as.numeric))
+  df[, 5:11] <- suppressWarnings(sapply(df[, 5:11], as.numeric))
 
   # Extracting Data -- General & Top 3 WDI
   general_info <- df %>%
