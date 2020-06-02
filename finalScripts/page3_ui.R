@@ -53,7 +53,7 @@ education_level_input <- radioButtons(
 )
 
 # define ui
-ui <- tabPanel(
+page3 <- tabPanel(
   "Income vs Percent Population in School",
     sidebarPanel(
       year_input,
@@ -68,7 +68,7 @@ ui <- tabPanel(
       plotlyOutput(
         "edu_plot"
         ),
-      h2(strong("Analysis")),
+      h2(strong("Analysis:")),
       p("In this chart, it is notable that there is no
         clear correlation between having a comparatively
         higher income per capita and having a larger percent
@@ -95,7 +95,3 @@ ui <- tabPanel(
         hypothesis.")
     )
   )
-
-
-
-shinyApp(ui = ui, server = server)

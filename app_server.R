@@ -6,6 +6,7 @@ data <- read.csv("data/data.csv",
   stringsAsFactors = FALSE,
   fileEncoding = "UTF-8-BOM"
 )
+
 data[, 5:11] <- sapply(data[, 5:11], as.numeric)
 
 server <- function(input, output) {

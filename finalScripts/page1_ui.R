@@ -18,7 +18,7 @@ main_panel <- mainPanel(
   h2(paste0("How does employment to population ratio vary by income ", "
             brackets in each region?")),
   plotlyOutput(outputId = "plot1"),
-  h2("Analysis"),
+  h2(strong("Analysis:")),
   p(paste0(
     "In this chart, a notable trend is that across all genders and years,",
     "the top 10% income bracket are always only occupied by the regions ",
