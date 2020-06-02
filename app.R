@@ -7,7 +7,7 @@ library(htmltools)
 
 #PUT COMMENTS ON EVERYTHING BC ITS ON THE RUBRIC
 
-source("ui.R")
-source("server.R")
+source("app_ui.R")
+source("app_server.R")
 
 shinyApp(ui = ui, server = server)
