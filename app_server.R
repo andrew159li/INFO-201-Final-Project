@@ -113,7 +113,9 @@ server <- function(input, output) {
         size = "income_pc",
         alpha = 0.8
       )) +
-      geom_smooth(mapping = aes(income_pc, co2_emissions), method = lm, se = FALSE) +
+      geom_line(stat = "smooth", linetype = "dashed",
+                mapping = aes(income_pc, co2_emissions),
+                colour="black", alpha=0.3, method = lm, se = FALSE) +
       labs(
         title = paste0("CO2 Emissions vs. Income (", input$years, ")"),
         x = "Income (per capita)",
