@@ -138,12 +138,12 @@ server <- function(input, output) {
     # build actual plot
     edu_plot <- plot_ly(
       data = df_for_plot,
-      x = ~percentage,
-      y = ~income_pc,
+      x = ~income_pc,
+      y = ~percentage,
       type = "scatter",
       mode = "markers",
       hovertext = (df_for_plot$country),
-      opacity = 0.5,
+      opacity = 1,
       color = ~region,
       size = 1
     ) %>%
@@ -151,8 +151,8 @@ server <- function(input, output) {
         title = paste("% Population in", names(school_type)
                       [school_type == input$education],
                       "School in", input$year),
-        xaxis = list(title = "Percent population in school", range = c(0, 0.3)),
-        yaxis = list(title = "Income per capita", range = c(0, 55000))
+        xaxis = list(title = "Income (per capita)", range = c(0, 55000)),
+        yaxis = list(title = "Population in School (%)", range = c(0, 0.3))
       )
   })
 }

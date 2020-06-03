@@ -33,7 +33,7 @@ year_input <- selectInput(
   "year",
   label = "Year to display",
   # 2018 because 2019 has no data for education
-  choices = c(as.numeric(1991:2018)),
+  choices = c(as.numeric(1991:2017)),
   selected = as.numeric(1991)
 )
 
