@@ -160,27 +160,29 @@ server <- function(input, output) {
       )
   })
 
-  # Chart 1
-  output$chart1 <- renderImage({
-    file_name <- normalizePath(file.path("./img/plot1.png"))
-    list(src = file_name,
-         width = 1000,
-         height = 400)
-  }, deleteFile = FALSE)
-
+  output$chart1 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/TgQPZto.png",
+      '">'
+    )
+  })
+  
   # Chart 2
-  output$chart2 <- renderImage({
-    file_name <- normalizePath(file.path("./img/plot2.png"))
-    list(src = file_name,
-         width = 1000,
-         height = 400)
-  }, deleteFile = FALSE)
-
-  # Chart 3
-  output$chart3 <- renderImage({
-    file_name <- normalizePath(file.path("./img/plot3.png"))
-    list(src = file_name,
-         width = 1000,
-         height = 400)
-  }, deleteFile = FALSE)
+  output$chart2 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/qZgfB3a.png",
+      '">'
+    )
+  })
+  
+  #Chart 3
+  output$chart3 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/yFt37Gc.png",
+      '">'
+    )
+  })
 }
