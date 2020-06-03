@@ -68,30 +68,9 @@ page3 <- tabPanel(
       plotlyOutput(
         "edu_plot"
         ),
-      h2(strong("Analysis:")),
-      p("In this chart, it is notable that there is no
-        clear correlation between having a comparatively
-        higher income per capita and having a larger percent
-        population in schools. While some countries have
-        tended to have a larger percent population in
-        school as well as a higher income per capita like
-        Canada or Australia, some countries have shown
-        a lower percentage of the population in education,
-        but still with a large income per capita.
-        Interestingly, the three countries which display
-        this phenomenon most obviously are Germany,
-        United Kingdom, and France; all three are from
-        Europe. For example, in the year 2001, Germany has
-        the 3rd highest income per capita out of all
-        35 countries, but the second lowest percent
-        population in school of all 35 countries at
-        3.9%. This perhaps brings an interesting point:
-        though education may be correlated with data about
-        workforce, there may be too many other factors
-        entwined with education (such as societal and
-        cultural expectations which may reveal
-        preferred trades and/or careers) which blur our
-        ability to pick out a clear correlation or
-        hypothesis.")
+      h2(strong("What does this question help us understand?")),
+      p("This chart helps us understand if there is a connection between
+        how much of a country's population is pursuing an education and
+        its income per capita. ")
     )
   )

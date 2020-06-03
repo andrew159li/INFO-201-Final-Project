@@ -19,23 +19,14 @@ main_panel <- mainPanel(
   "How does employment to population ratio vary by income ", 
   "brackets in each region?"),
   plotlyOutput(outputId = "plot1"),
-  h2(strong("Analysis:")),
+  h2(strong("What does this question help us understand?")),
   p(paste0(
-    "In this chart, a notable trend is that across all genders and years,",
-    "the top 10% income bracket are always only occupied by the regions ",
-    "Europe, North & Central America, and Oceania. The other regions, ",
-    "Africa, Asia, South America, and The Caribean, are always in either ",
-    "the lowest 10% or 10%-50% income brackets. ",
-    "Another interesting trend is that in general lower income brackets ",
-    "have higher employment to population ratios, indicating that ",
-    "more people are employed, but individuals make less income than those ",
-    "in the individuals in higher income bracket countries. ",
-    "It is also worth pointing out that the number of countries in the ",
-    "lowest 10% income bracket always has the most countries, compared to ",
-    "the top 10% income bracket which consistently only has one or two ",
-    "countries. ",
-    "Lastly, the difference between male and female employment to population ",
-    "ratios have largely stayed the same."
+    "This graph will allow us to see any patterns of how employment to
+    population ratio varies by income brackets in each region.
+    We want to see if there are any differences between male and
+    female employment to population ratio in specific regions,
+    and where they stand in comparison to each other in terms of
+    their income brackets."
   ))
 )
 

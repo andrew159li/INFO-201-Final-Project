@@ -1,5 +1,4 @@
 intro_panel <- mainPanel(
-  includeCSS("finalScripts/overview_style.css"),
   h1("Study on World Income Per Capita"), br(),
   h3("What is the study about?"), 
   p("Are the richest countries the ones that produce the most CO2? Are they the
