@@ -1,7 +1,3 @@
-library(shiny)
-library(ggplot2)
-library(dplyr)
-
 data <- read.csv("data/data.csv",
   stringsAsFactors = FALSE,
   fileEncoding = "UTF-8-BOM"
