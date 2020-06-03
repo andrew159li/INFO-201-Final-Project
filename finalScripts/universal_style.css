@@ -12,19 +12,16 @@ img {
 h1 {
   color: white;
   font-family: verdana;
-  font-weight: bold;
 }
 
 h2 {
   color: white;
   font-family: verdana;
-  font-weight: bold;
 }
 
 h3 {
   color: white;
   font-family: verdana;
-  font-weight: bold;
 }
 
 p {
@@ -39,6 +36,7 @@ a {
 
 a:hover {
   color: coral;
+  font-weight: bold;
   text-decoration: underline;
 }
 
