@@ -1,3 +1,5 @@
+library(lintr)
+
 # Source Files
 source("finalScripts/overview_ui.R")
 source("finalScripts/page1_ui.R")
@@ -17,10 +19,10 @@ ui <- navbarPage(
 
   # Page 2
   page2,
-  
+
   # Page 3
   page3,
-  
+
   # Summary Tab
   summary
 )

@@ -1,3 +1,4 @@
+library(lintr)
 summary_panel <- mainPanel(
   h1(strong("Summary")),
   h3("How does", strong("employment to population ratio"), "vary by income
@@ -17,8 +18,9 @@ summary_panel <- mainPanel(
     countries. This may be because many people in poorer areas have to take
     on multiple low-income jobs in order to support their families."),
   br(),
-  h3("Is there a correlation between a country's", 
+  h3("Is there a correlation between a country's",
      strong("CO2 emissions"), "produced and income per capita?"),
+  br(),
   imageOutput("chart2"),
   br(), br(),
   p("Generally, there seems to be a consistent trend that countries with higher
@@ -41,6 +43,7 @@ summary_panel <- mainPanel(
   h3("Is there a correlation between a country's
          percent", strong("population in education"), "and income
          per capita?"),
+  br(),
   imageOutput("chart3"),
   br(), br(),
   p("In this chart, it is notable that there is no clear correlation between
@@ -58,7 +61,6 @@ summary_panel <- mainPanel(
     may be too many other factors entwined with education (such as societal
     and cultural expectations which may reveal preferred trades and/or careers)
     which blur our ability to pick out a clear correlation or hypothesis.")
-  
 )
 
 summary <- tabPanel(

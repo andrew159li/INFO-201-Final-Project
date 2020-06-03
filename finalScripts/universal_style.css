@@ -1,8 +1,9 @@
 body {
   background-color: #2F4F4F;
   margin-top: 5px;
-  margin-bottom: 150px;
-  margin-left: 100px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .tab {
@@ -26,26 +27,31 @@ img {
 h1 {
   color: white;
   font-family: Helvetica;
+  font-size: xx-large;
 }
 
 h2 {
   color: white;
   font-family: Helvetica;
+  font-size: xx-large;
 }
 
 h3 {
   color: white;
   font-family: Helvetica;
+  font-size: x-large;
 }
 
 p {
   color: white;
   font-family: Helvetica;
+  font-size: large;
 }
 
 a {
   color: coral;
   font-family: Helvetica;
+  font-size: large;
 }
 
 a:hover {

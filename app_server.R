@@ -1,3 +1,4 @@
+library(lintr)
 data <- read.csv("data/data.csv",
   stringsAsFactors = FALSE,
   fileEncoding = "UTF-8-BOM"
@@ -104,7 +105,7 @@ server <- function(input, output) {
     page2_data <- data %>%
       filter(year == input$years &
                country %in% country_vector)
-    
+
     scatterplot <- ggplot(page2_data) +
       geom_point(mapping = aes_string(
         x = "income_pc",
@@ -115,7 +116,7 @@ server <- function(input, output) {
       )) +
       geom_line(stat = "smooth", linetype = "dashed",
                 mapping = aes(income_pc, co2_emissions),
-                colour="black", alpha=0.3, method = lm, se = FALSE) +
+                colour = "black", alpha = 0.3, method = lm, se = FALSE) +
       labs(
         title = paste0("CO2 Emissions vs. Income (", input$years, ")"),
         x = "Income (per capita)",
@@ -123,7 +124,7 @@ server <- function(input, output) {
       ) +
       guides(size = FALSE, alpha = FALSE) +
       theme(plot.title = element_text(hjust = 0.5))
-    
+
     interactive <- ggplotly(scatterplot,
                             tooltip = c("country", "x", "y")
     )
@@ -158,19 +159,19 @@ server <- function(input, output) {
         yaxis = list(title = "Population in School (%)", range = c(0, 0.3))
       )
   })
-  
+
   # Chart 1
   output$chart1 <- renderImage({
     file_name <- normalizePath(file.path("./img/plot1.png"))
     list(src = file_name)
   }, deleteFile = FALSE)
-  
+
   # Chart 2
   output$chart2 <- renderImage({
     file_name <- normalizePath(file.path("./img/plot2.png"))
     list(src = file_name)
   }, deleteFile = FALSE)
-  
+
   # Chart 3
   output$chart3 <- renderImage({
     file_name <- normalizePath(file.path("./img/plot3.png"))

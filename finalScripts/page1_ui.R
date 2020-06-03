@@ -1,3 +1,4 @@
+library(lintr)
 side_panel <- sidebarPanel(
   radioButtons(
     inputId = "gender",
@@ -16,8 +17,8 @@ side_panel <- sidebarPanel(
 
 main_panel <- mainPanel(
   h2(strong("Question: "),
-  "How does employment to population ratio vary by income ", 
-  "brackets in each region?"),
+     "How does employment to population ratio vary by income ",
+     "brackets in each region?"),
   plotlyOutput(outputId = "plot1"),
   h2(strong("What does this question help us understand?")),
   p("This graph allows us to distinguish any patterns between

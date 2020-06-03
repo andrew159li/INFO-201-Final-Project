@@ -1,3 +1,5 @@
+library(lintr)
+
 # Setting Up Data
 df <- read.csv("data/data.csv",
                stringsAsFactors = FALSE,
@@ -97,9 +99,9 @@ main_panel <- mainPanel(h2(strong("Question: "),
                            "a country's CO2 emissions produced ",
                            "and income per capita?"),
                         plotlyOutput("plot2"),
-                        h2(strong("What does this question 
+                        h2(strong("What does this question
                                   help us understand?")),
-                        p("This chart shows the relationship between 
+                        p("This chart shows the relationship between
                           a country's income generation and their CO2
                           emissions. In general, as income increases,
                           CO2 emissions increase as well."),
