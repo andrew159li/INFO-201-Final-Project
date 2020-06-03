@@ -1,29 +1,42 @@
 body {
   background-color: #35373a;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 100px;
+}
+
+img {
+  border-radius: 8%;
 }
 
 h1 {
   color: white;
+  font-family: verdana;
 }
 
 h2 {
   color: white;
+  font-family: verdana;
 }
 
 h3 {
   color: white;
+  font-family: verdana;
 }
 
 p {
   color: white;
+  font-family: verdana;
 }
 
 a {
   color: coral;
+  font-family: verdana;
 }
 
 a:hover {
   color: coral;
+  font-weight: bold;
   text-decoration: underline;
 }
 
