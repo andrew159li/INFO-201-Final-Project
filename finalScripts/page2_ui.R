@@ -103,35 +103,35 @@ main_panel <- mainPanel(h2(strong("Question: "),
                            "and income per capita?"),
                         plotlyOutput("plot2"),
                         h2(strong("Analysis:")),
-                        p("Generally, there seems to be a consistent ",
-                          "trend that countries with higher incomes ",
-                          "have higher CO2 emissions. However, there are ",
-                          "exceptions to this. For example, Trinidad & Tobago ",
-                          "has incredibly high CO2 emissions but has a ",
-                          "relatively low income per capita. On the other ",
-                          "hand, France has a very high income per capita ",
-                          "but has maintained relatively low CO2 emissions. ",
-                          "As seen from this data exploration, there ",
-                          "appears to be a positive correlation between ",
-                          "a country's CO2 emissions and their income per ",
-                          "capita. As income per capita increases, so do CO2 ",
-                          "emissions. Therefore, we can infer that the rise ",
-                          "in CO2 emissions may be due to industrialization ",
-                          "and the emergence of a new or improved economy ",
-                          "that reels in greater income. For example, with ",
-                          "a new manufacturing economy, the resulting ",
-                          "construction of more factories would lead to ",
-                          "greater amounts of pollution, and thus the ",
-                          "increase in CO2 emissions. We have hope through ",
-                          "analyzing this data that it is possible for ",
-                          "industrializing and developing countries to ",
-                          "one day increase their income per capita without ",
-                          "having such significant emissions of CO2, through ",
-                          "the handful of countries who have already ",
-                          "begun to achieve this."))
+                        p("Generally, there seems to be a consistent
+                          trend that countries with higher incomes
+                          have higher CO2 emissions. However, there are
+                          exceptions to this. For example, Trinidad & Tobago
+                          has incredibly high CO2 emissions but has a
+                          relatively low income per capita. On the other
+                          hand, France has a very high income per capita
+                          but has maintained relatively low CO2 emissions.
+                          As seen from this data exploration, there
+                          appears to be a positive correlation between
+                          a country's CO2 emissions and their income per
+                          capita. As income per capita increases, so do CO2
+                          emissions. Therefore, we can infer that the rise
+                          in CO2 emissions may be due to industrialization
+                          and the emergence of a new or improved economy
+                          that reels in greater income. For example, with
+                          a new manufacturing economy, the resulting
+                          construction of more factories would lead to
+                          greater amounts of pollution, and thus the
+                          increase in CO2 emissions. We have hope through
+                          analyzing this data that it is possible for
+                          industrializing and developing countries to
+                          one day increase their income per capita without
+                          having such significant emissions of CO2, through
+                          the handful of countries who have already
+                          begun to achieve this."))
 
 page2 <- tabPanel(
-  "Income & CO2 Emissions",
+  "Income vs CO2 Emissions",
   sidebarLayout(
     sidebar_panel,
     main_panel
