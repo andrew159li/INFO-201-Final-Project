@@ -18,7 +18,7 @@ server <- function(input, output) {
     # Function to determine income bracket
     inc_bracket <- function(income, year_input) {
       year_data <- page1_data %>%
-        filter(year1 == year_input)
+        filter(year == year_input)
 
       range <- range(year_data$income_pc)
       difference <- range[2] - range[1]
