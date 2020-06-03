@@ -2,6 +2,7 @@ summary_panel <- mainPanel(
   h1("Summary"),
   h3("How does employment to population ratio vary by income ", "
             brackets in each region?"),
+  htmlOutput("chart1"),
   p("A noticeable trend we saw was that across all genders and years, the top
     10% income bracket are always only occupied by the regions Europe, North &
     Central America, and Oceania. The other regions, Africa, Asia,
@@ -17,6 +18,7 @@ summary_panel <- mainPanel(
   h3("Is there a correlation between ",
      "a country's CO2 emissions produced ",
      "and income per capita?"),
+  htmlOutput("chart2"),
   p("Generally, there seems to be a consistent trend that countries with higher
     incomes have higher CO2 emissions. However, there are exceptions to this.
     For example, Trinidad & Tobago has incredibly high CO2 emissions but has a
@@ -37,6 +39,7 @@ summary_panel <- mainPanel(
   h3("Is there a correlation between a country's
          percent population in education and income
          per capita?"),
+  htmlOutput("chart3"),
   p("In this chart, it is notable that there is no clear correlation between
     having a comparatively higher income per capita and having a larger
     percent population in schools. While some countries have tended to have a

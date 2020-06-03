@@ -155,4 +155,31 @@ server <- function(input, output) {
         yaxis = list(title = "Income per capita", range = c(0, 55000))
       )
   })
+  
+  # Chart 1
+  output$chart1 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/RmTxdnN.png",
+      '">'
+    )
+  })
+  
+  # Chart 2
+  output$chart2 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/1sPVCt1.png",
+      '">'
+    )
+  })
+  
+  #Chart 3
+  output$chart3 <- renderText({
+    c(
+      '<img src="',
+      "https://i.imgur.com/1sPVCt1.png",
+      '">'
+    )
+  })
 }

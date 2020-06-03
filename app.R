@@ -4,9 +4,8 @@ library(ggplot2)
 library(plotly)
 library(tidyr)
 library(htmltools)
+library(png)
 library(lintr)
-
-#PUT COMMENTS ON EVERYTHING BC ITS ON THE RUBRIC
 
 source("app_ui.R")
 source("app_server.R")

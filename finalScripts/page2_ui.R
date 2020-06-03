@@ -126,7 +126,7 @@ main_panel <- mainPanel(h2(strong("Question: "),
                           "begun to achieve this."))
 
 page2 <- tabPanel(
-  "Income & CO2 Emissions",
+  "Income vs CO2 Emissions",
   sidebarLayout(
     sidebar_panel,
     main_panel
