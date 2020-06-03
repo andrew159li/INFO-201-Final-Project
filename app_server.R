@@ -115,10 +115,10 @@ server <- function(input, output) {
         y = "co2_emissions",
         color = "country",
         size = "income_pc",
-        alpha = 0.5
+        alpha = 0.8
       )) +
       labs(
-        title = "CO2 Emissions vs. Income (1994 - 2014)",
+        title = paste0("CO2 Emissions vs. Income (", input$years, ")"),
         x = "Income (per capita)",
         y = "CO2 Emissions (metric tons per capita)"
       ) +
