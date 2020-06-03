@@ -13,3 +13,20 @@ h2 {
 h3 {
   color: white;
 }
+
+p {
+  color: white;
+}
+
+a {
+  color: coral;
+}
+
+a:hover {
+  color: coral;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: chocolate;
+}
