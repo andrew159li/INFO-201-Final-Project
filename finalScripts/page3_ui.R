@@ -30,7 +30,7 @@ df_melt <- df %>%
 
 # Widget to select year
 year_input <- selectInput(
-  "year_display",
+  "year",
   label = "Year to display",
   # 2018 because 2019 has no data for education
   choices = c(as.numeric(1991:2018)),
