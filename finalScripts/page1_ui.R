@@ -8,7 +8,7 @@ side_panel <- sidebarPanel(
     )
   ),
   selectInput(
-    inputId = "year",
+    inputId = "year1",
     label = strong("Select year:"),
     choices = c(1991:2017)
   )
