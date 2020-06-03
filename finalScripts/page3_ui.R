@@ -74,7 +74,7 @@ page3 <- tabPanel(
         the younger generation of a country's population pursuing education
         and a country's income per capita. There does not appear to be a
         strong correlation between a country's current population in school
-        and their income per capita."),
+        and its income per capita."),
       h2(strong("Key Takeaways:")),
       p("- The income and percentage of a country's population in school
         varies greatly across regions",

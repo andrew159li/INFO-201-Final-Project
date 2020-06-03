@@ -108,11 +108,11 @@ main_panel <- mainPanel(h2(strong("Question: "),
                         h2(strong("Key Takeaways:")),
                         p("- CO2 emissions generally rise with each year",
                           br(),
-                          "- Trinidad & Tobago has low income but
-                          high CO2 emissions, contrary to trend line",
+                          "- Trinidad & Tobago have low income but high CO2
+                          emissions, contrary to the trend line",
                           br(),
-                          "- France has relatively high income but low
-                          CO2 emissions contrary to trend line",
+                          "- France has a relatively high income but low CO2
+                          emissions contrary to the trend line ",
                           br(),
                           "- It is possible for countries to increase
                           their income per capita without leaving a large

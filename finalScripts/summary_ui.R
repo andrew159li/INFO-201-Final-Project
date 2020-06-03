@@ -7,7 +7,7 @@ summary_panel <- mainPanel(
   htmlOutput("chart1"),
   br(), br(),
   p("A noticeable trend we saw was that across all genders and years, the top
-    10% income bracket are always only occupied by the regions Europe, North &
+    10% income bracket is always only occupied by the regions Europe, North &
     Central America, and Oceania. The other regions, Africa, Asia,
     South America, and The Caribbean, are always in either the lowest 10% or
     10%-50% income brackets. This is shown by the majority of said regions
@@ -29,7 +29,7 @@ summary_panel <- mainPanel(
     relatively low income per capita. On the other hand, France has a very high
     income per capita but has maintained relatively low CO2 emissions. As seen
     from this data exploration, there appears to be a positive correlation
-    between a country's CO2 emissions and their income per capita. As income
+    between a country's CO2 emissions and its income per capita. As income
     per capita increases, so do CO2 emissions. Therefore, we can infer that
     the rise in CO2 emissions may be due to industrialization and the emergence
     of a new or improved economy that reels in greater income. For example, with
@@ -53,9 +53,9 @@ summary_panel <- mainPanel(
     like Canada or Australia, some countries have shown a lower percentage of
     the population in education, but still with a large income per capita.
     Interestingly, the three countries which display this phenomenon most
-    obviously are Germany, United Kingdom, and France; all three are from
-    Europe. For example, in the year 2001, Germany has the 3rd highest income
-    per capita out of all 35 countries, but the second lowest percent population
+    obviously are Germany, the United Kingdom, and France; all three are from
+    Europe. For example, in the year 2001, Germany has the third-highest income
+    per capita out of all 35 countries, but the second-lowest percent population
     in school of all 35 countries at 3.9%. This perhaps brings an interesting
     point: though education may be correlated with data about workforce, there
     may be too many other factors entwined with education (such as societal

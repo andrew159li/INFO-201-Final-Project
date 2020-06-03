@@ -28,6 +28,7 @@ intro_panel <- mainPanel(
     primary/secondary schools and income per capita?",
     br(), br(),
     "The interactive graphs and the insights can be found on the next
+    few pages.The interactive graphs and insights can be found in the next
     few pages."),
   br(), br(),
   img(src = paste0("https://fintechnews.sg/wp-content/uploads/2018/12/",

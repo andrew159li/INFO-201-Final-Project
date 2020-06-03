@@ -36,10 +36,10 @@ main_panel <- mainPanel(
   "- Male employment to population ratio is consistently higher
   than female to employment to population ratio each year",
   br(),
-  "- Lower income brackets generally have higher employment to
+  "- Lower-income brackets generally have higher employment to
   population ratios, meaning that more people are employed, but
   those individuals have lower incomes than individuals from
-  higher income bracket countries")
+  higher-income bracket countries")
 )
 
 page1 <- tabPanel(
