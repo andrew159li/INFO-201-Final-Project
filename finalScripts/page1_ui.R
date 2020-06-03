@@ -15,8 +15,9 @@ side_panel <- sidebarPanel(
 )
 
 main_panel <- mainPanel(
-  h2(paste0("How does employment to population ratio vary by income ", "
-            brackets in each region?")),
+  h2(strong("Question: "),
+  "How does employment to population ratio vary by income ", 
+  "brackets in each region?"),
   plotlyOutput(outputId = "plot1"),
   h2(strong("Analysis:")),
   p(paste0(
