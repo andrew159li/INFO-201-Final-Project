@@ -18,7 +18,7 @@ server <- function(input, output) {
     # Function to determine income bracket
     inc_bracket <- function(income, year_input) {
       year_data <- page1_data %>%
-        filter(year == year_input)
+        filter(year1 == year_input)
 
       range <- range(year_data$income_pc)
       difference <- range[2] - range[1]
@@ -55,8 +55,8 @@ server <- function(input, output) {
 
     # Filter data to input year and add income bracket
     page1_data <- page1_data %>%
-      filter(year == input$year) %>%
-      mutate(income_bracket = sapply(income_pc, inc_bracket, input$year))
+      filter(year == input$year1) %>%
+      mutate(income_bracket = sapply(income_pc, inc_bracket, input$year1))
 
     # Set radio button input to desired column
     col <- switch(input$gender, epr_female = page1_data$epr_female,
@@ -85,7 +85,7 @@ server <- function(input, output) {
       labs(
         title = paste0(
           labels(input$gender), " vs Income Bracket by Region in ",
-          input$year
+          input$year1
         ),
         x = "Income Brackets",
         y = labels(input$gender)
