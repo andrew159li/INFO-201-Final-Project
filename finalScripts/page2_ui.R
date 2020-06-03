@@ -43,7 +43,6 @@ select_africa <- checkboxGroupInput(
   inputId = "region1",
   label = "Africa",
   choices = c(africa[, ]),
-  selected = c(africa[, ])
 )
 
 select_asia <- checkboxGroupInput(
@@ -56,6 +55,7 @@ select_caribbean <- checkboxGroupInput(
   inputId = "region3",
   label = "The Caribbean",
   choices = c(caribbean[, ]),
+  selected = c(caribbean[, ])
 )
 
 select_northcentral <- checkboxGroupInput(
@@ -99,10 +99,23 @@ main_panel <- mainPanel(h2(strong("Question: "),
                         plotlyOutput("plot2"),
                         h2(strong("What does this question 
                                   help us understand?")),
-                        p("This chart is trying to help us see if there is any 
-                          correlation between a country's income generation 
-                          and their CO2 emissions."))
-
+                        p("This chart shows the relationship between 
+                          a country's income generation and their CO2
+                          emissions. In general, as income increases,
+                          CO2 emissions increase as well."),
+                        h2(strong("Key Takeaways:")),
+                        p("- CO2 emissions generally rise with each year",
+                          br(),
+                          "- Trinidad & Tobago has high low income but
+                          high CO2 emissions, contrary to trend line",
+                          br(),
+                          "- France has relatively high income but low
+                          CO2 emissions contrary to trend line",
+                          br(),
+                          "- It is possible for countries to increase
+                          their income per capita without leaving a large
+                          carbon footprint of CO2 emissions"))
+# Page 2 UI Variable
 page2 <- tabPanel(
   "Income vs CO2 Emissions",
   sidebarLayout(

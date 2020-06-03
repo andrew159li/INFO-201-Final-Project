@@ -1,37 +1,51 @@
 body {
-  background-color: #35373a;
-  margin-top: 150px;
+  background-color: #2F4F4F;
+  margin-top: 5px;
   margin-bottom: 150px;
   margin-left: 100px;
 }
 
+.tab {
+  overflow: hidden;
+  border: 1px;
+}
+
+.tab button:hover {
+  background-color: #2F4F4F;
+}
+
+.tab button.active {
+  background-color: #2F4F4F;
+}
+
 img {
-  border-radius: 8%;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
   color: white;
-  font-family: verdana;
+  font-family: Helvetica;
 }
 
 h2 {
   color: white;
-  font-family: verdana;
+  font-family: Helvetica;
 }
 
 h3 {
   color: white;
-  font-family: verdana;
+  font-family: Helvetica;
 }
 
 p {
   color: white;
-  font-family: verdana;
+  font-family: Helvetica;
 }
 
 a {
   color: coral;
-  font-family: verdana;
+  font-family: Helvetica;
 }
 
 a:hover {

@@ -69,8 +69,20 @@ page3 <- tabPanel(
         "edu_plot"
         ),
       h2(strong("What does this question help us understand?")),
-      p("This chart helps us understand if there is a connection between
-        how much of a country's population is pursuing an education and
-        its income per capita. ")
+      p("This chart helps us understand the connection between
+        the younger generation of a country's population pursuing education
+        and a country's income per capita. There does not appear to be a
+        strong correlation between a country's current population in school
+        and their income per capita."),
+      h2(strong("Key Takeaways:")),
+      p("- The income and percentage of a country's population in school
+        varies greatly across regions",
+        br(),
+        "- Germany, UK, and France have a lower percentage of their
+        population in early education, but maintain high income per capita",
+        br(),
+        "- Although education can often correlate to the condition of a
+        country's workforce, education remains a complex topic that cannot
+        solely be quantified to determine the strength of a country's economy")
     )
   )

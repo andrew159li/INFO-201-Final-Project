@@ -20,14 +20,25 @@ main_panel <- mainPanel(
   "brackets in each region?"),
   plotlyOutput(outputId = "plot1"),
   h2(strong("What does this question help us understand?")),
-  p(paste0(
-    "This graph will allow us to see any patterns of how employment to
-    population ratio varies by income brackets in each region.
-    We want to see if there are any differences between male and
-    female employment to population ratio in specific regions,
-    and where they stand in comparison to each other in terms of
-    their income brackets."
-  ))
+  p("This graph allows us to distinguish any patterns between
+    employment to population ratio and the income brackets
+    of the 7 regions of the world. We will be able to visualize
+    the differences between male and female employment to
+    population ratios in specific regions, as well as where
+    they stand in comparison to one another in terms of
+    their respective income brackets."),
+  h2(strong("Key Takeaways:")),
+  p("- The lowest income bracket consists of countries from all
+    7 regions of the world; this indicates that economic success
+    is not a geographical determination",
+  br(),
+  "- Male employment to population ratio is consistently higher
+  than female to employment to population ratio each year",
+  br(),
+  "- Lower income brackets generally have higher employment to
+  population ratios, meaning that more people are employed, but
+  those individuals have lower incomes than individuals from
+  higher income bracket countries")
 )
 
 page1 <- tabPanel(

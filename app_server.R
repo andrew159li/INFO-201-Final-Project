@@ -151,7 +151,7 @@ server <- function(input, output) {
       size = 1
     ) %>%
       layout(
-        title = paste("% Population in", names(school_type)
+        title = paste("Percent Population in", names(school_type)
                       [school_type == input$education],
                       "School in", input$year),
         xaxis = list(title = "Income (per capita)", range = c(0, 55000)),
@@ -160,29 +160,20 @@ server <- function(input, output) {
   })
   
   # Chart 1
-  output$chart1 <- renderText({
-    c(
-      '<img src="',
-      "https://i.imgur.com/RmTxdnN.png",
-      '">'
-    )
-  })
+  output$chart1 <- renderImage({
+    file_name <- normalizePath(file.path("./img/plot1.png"))
+    list(src = file_name)
+  }, deleteFile = FALSE)
   
   # Chart 2
-  output$chart2 <- renderText({
-    c(
-      '<img src="',
-      "https://i.imgur.com/1sPVCt1.png",
-      '">'
-    )
-  })
+  output$chart2 <- renderImage({
+    file_name <- normalizePath(file.path("./img/plot2.png"))
+    list(src = file_name)
+  }, deleteFile = FALSE)
   
-  #Chart 3
-  output$chart3 <- renderText({
-    c(
-      '<img src="',
-      "https://i.imgur.com/1sPVCt1.png",
-      '">'
-    )
-  })
+  # Chart 3
+  output$chart3 <- renderImage({
+    file_name <- normalizePath(file.path("./img/plot3.png"))
+    list(src = file_name)
+  }, deleteFile = FALSE)
 }

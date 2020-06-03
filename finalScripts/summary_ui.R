@@ -1,8 +1,10 @@
 summary_panel <- mainPanel(
-  h1("Summary"),
-  h3("How does employment to population ratio vary by income ", "
-            brackets in each region?"),
-  htmlOutput("chart1"),
+  h1(strong("Summary")),
+  h3("How does", strong("employment to population ratio"), "vary by income
+     brackets in each region?"),
+  br(),
+  imageOutput("chart1"),
+  br(), br(),
   p("A noticeable trend we saw was that across all genders and years, the top
     10% income bracket are always only occupied by the regions Europe, North &
     Central America, and Oceania. The other regions, Africa, Asia,
@@ -15,10 +17,10 @@ summary_panel <- mainPanel(
     countries. This may be because many people in poorer areas have to take
     on multiple low-income jobs in order to support their families."),
   br(),
-  h3("Is there a correlation between ",
-     "a country's CO2 emissions produced ",
-     "and income per capita?"),
-  htmlOutput("chart2"),
+  h3("Is there a correlation between a country's", 
+     strong("CO2 emissions"), "produced and income per capita?"),
+  imageOutput("chart2"),
+  br(), br(),
   p("Generally, there seems to be a consistent trend that countries with higher
     incomes have higher CO2 emissions. However, there are exceptions to this.
     For example, Trinidad & Tobago has incredibly high CO2 emissions but has a
@@ -35,11 +37,12 @@ summary_panel <- mainPanel(
     for industrializing and developing countries to one day increase their
     income per capita without having such significant emissions of CO2,
     through the handful of countries who have already begun to achieve this."),
-  br(),
+  br(), br(),
   h3("Is there a correlation between a country's
-         percent population in education and income
+         percent", strong("population in education"), "and income
          per capita?"),
-  htmlOutput("chart3"),
+  imageOutput("chart3"),
+  br(), br(),
   p("In this chart, it is notable that there is no clear correlation between
     having a comparatively higher income per capita and having a larger
     percent population in schools. While some countries have tended to have a
