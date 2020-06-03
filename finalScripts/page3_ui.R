@@ -6,7 +6,9 @@ library(shiny)
 library(lintr)
 
 # load in data
-df <- read.csv("data/data.csv", stringsAsFactors = FALSE)
+df <- read.csv("data/data.csv",
+               stringsAsFactors = FALSE,
+               fileEncoding = "UTF-8-BOM")
 df[is.na(df)] <- 0
 
 # make changes to data
@@ -15,8 +17,7 @@ df <- df %>%
   mutate(
     primary_perc = pupils_pri_educ / population,
     secondary_perc = pupils_sec_educ / population,
-    both_perc = (pupils_pri_educ + pupils_sec_educ) / population,
-    year = as.numeric(ï..year)
+    both_perc = (pupils_pri_educ + pupils_sec_educ) / population
   ) %>%
   select(year, country, income_pc, primary_perc,
          secondary_perc, both_perc, region) %>%
