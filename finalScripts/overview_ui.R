@@ -1,5 +1,3 @@
-library("shiny")
-
 intro_panel <- mainPanel(
   includeCSS("finalScripts/overview_style.css"),
   h1("Study on World Income Per Capita"), br(),

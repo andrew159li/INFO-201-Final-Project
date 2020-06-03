@@ -1,8 +1,3 @@
-library(shiny)
-library(ggplot2)
-library(dplyr)
-library(lintr)
-
 # Setting Up Data
 df <- read.csv("data/data.csv",
                stringsAsFactors = FALSE,

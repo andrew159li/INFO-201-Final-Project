@@ -4,6 +4,7 @@ library(ggplot2)
 library(plotly)
 library(tidyr)
 library(htmltools)
+library(lintr)
 
 #PUT COMMENTS ON EVERYTHING BC ITS ON THE RUBRIC
 
