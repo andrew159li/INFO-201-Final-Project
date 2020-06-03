@@ -16,7 +16,7 @@ df <- df %>%
     primary_perc = pupils_pri_educ / population,
     secondary_perc = pupils_sec_educ / population,
     both_perc = (pupils_pri_educ + pupils_sec_educ) / population,
-    year = ï..year
+    year = as.numeric(ï..year)
   ) %>%
   select(year, country, income_pc, primary_perc,
          secondary_perc, both_perc, region) %>%
@@ -30,7 +30,7 @@ df_melt <- df %>%
 
 # Widget to select year
 year_input <- selectInput(
-  "year",
+  "year_display",
   label = "Year to display",
   # 2018 because 2019 has no data for education
   choices = c(as.numeric(1991:2018)),
