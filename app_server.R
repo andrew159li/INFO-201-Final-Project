@@ -103,8 +103,8 @@ server <- function(input, output) {
     )
     page2_data <- data %>%
       filter(year == input$years &
-        country %in% country_vector)
-
+               country %in% country_vector)
+    
     scatterplot <- ggplot(page2_data) +
       geom_point(mapping = aes_string(
         x = "income_pc",
@@ -113,6 +113,7 @@ server <- function(input, output) {
         size = "income_pc",
         alpha = 0.8
       )) +
+      geom_smooth(mapping = aes(income_pc, co2_emissions), method = lm, se = FALSE) +
       labs(
         title = paste0("CO2 Emissions vs. Income (", input$years, ")"),
         x = "Income (per capita)",
@@ -120,9 +121,9 @@ server <- function(input, output) {
       ) +
       guides(size = FALSE, alpha = FALSE) +
       theme(plot.title = element_text(hjust = 0.5))
-
+    
     interactive <- ggplotly(scatterplot,
-      tooltip = c("country", "x", "y")
+                            tooltip = c("country", "x", "y")
     )
     return(interactive)
   })
