@@ -1,25 +1,40 @@
 body {
   background-color: #35373a;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 100px;
+}
+
+img {
+  border-radius: 8%;
 }
 
 h1 {
   color: white;
+  font-family: verdana;
+  font-weight: bold;
 }
 
 h2 {
   color: white;
+  font-family: verdana;
+  font-weight: bold;
 }
 
 h3 {
   color: white;
+  font-family: verdana;
+  font-weight: bold;
 }
 
 p {
   color: white;
+  font-family: verdana;
 }
 
 a {
   color: coral;
+  font-family: verdana;
 }
 
 a:hover {
